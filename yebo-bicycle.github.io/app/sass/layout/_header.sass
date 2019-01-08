@@ -1,0 +1,88 @@
+.header
+	min-height: 400px
+	height: 100vh
+	background-position: center
+	psoition: relative
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(0,0,0,0.2)
+	.nav
+		position: fixed
+		left: 0
+		top: 30px
+		right: 0
+		&.fixed
+			z-index: 3
+			top: 0
+			padding: 10px 0
+			box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.1)
+			background-color: rgba(255,255,255,0.8)
+			$logo-size: 50px
+			.logo
+				min-height: $logo-size
+				min-width: $logo-size
+				max-height: $logo-size
+				max-width: $logo-size
+	.menu
+		&-item
+			margin: 0 50px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				height: 2px
+				bottom: 0
+				left: 0
+				right: 0
+				width: 0
+				background-color: $primary
+			&:hover,
+			&.active
+				color: $primary
+				&:before
+					transition: width .5s
+					width: 100%
+	.info
+		padding: 10px
+		.title
+			text-shadow: 1px 1px 2px rgba(150,150,150,0.3)
+			&:first-child
+				color: $primary
+			&:last-child
+				color: $third
+
+@media screen and (max-width: $mobile-lg)
+	$logo-size: 50px
+	.header
+		.menu
+			&-item
+				margin: 0 10px
+				font-size: 14px
+			.logo
+				margin: 0 5px
+				min-height: $logo-size
+				min-width: $logo-size
+				max-height: $logo-size
+				max-width: $logo-size
+
+@media screen and (max-width: $mobile-sm)
+	$logo-size: 30px
+	.header
+		.nav
+			&.fixed
+				.logo
+					min-height: $logo-size
+					min-width: $logo-size
+					max-height: $logo-size
+					max-width: $logo-size
+		.menu
+			.logo
+				min-height: $logo-size
+				min-width: $logo-size
+				max-height: $logo-size
+				max-width: $logo-size

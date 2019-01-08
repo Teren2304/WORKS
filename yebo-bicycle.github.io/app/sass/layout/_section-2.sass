@@ -1,0 +1,43 @@
+.section-2
+	.work
+		&-item
+			height: 600px
+			position: relative
+			display: flex
+			flex-direction: column
+		&-text-block
+			flex-grow: 1
+			padding: 50px
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				left: 50%
+				bottom: 0
+				transform: translate(-50%, 100%)
+				border: 15px solid transparent
+				border-top: 15px solid $base-background-color
+		
+			.icon
+				max-width: 40px
+			.separate
+				margin-top: 30px
+		&-icon
+			max-width: 150px
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+@media screen and (max-width: $tablet-sm)
+	.section-2
+		.work
+			&-text-block
+				padding: 30px
+@media screen and (max-width: $mobile-lg)
+	.section-2
+		.work
+			&-item
+				height: auto
+				min-height: 300px
+			&-text-block
+				padding: 30px 0

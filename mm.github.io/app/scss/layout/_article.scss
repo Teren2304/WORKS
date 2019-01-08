@@ -1,0 +1,25 @@
+.article{
+	&-wrapper{
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+		background-color: rgba(255,255,255,0.5);
+	}
+	&-img{
+		border-radius: 5px;
+		margin: 0 auto 25px auto;
+		display: block;
+	}
+	&-text{
+		margin-bottom: 25px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&-title,
+	&-text{
+		@include media-max(767) {
+            padding: 0 10px;
+        }	
+	}
+}

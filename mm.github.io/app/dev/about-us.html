@@ -1,0 +1,72 @@
+{% set active = 'about-us' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main inner [ about-us ]">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<div class="grid-x">
+					<div class="cell sm-12 md-12 lg-12">
+						<h4 class="title semibold">Contact</h4>
+					</div>
+					<div class="cell sm-12 md-12 lg-6 main-left">
+						<div id="map" class="[ map ]"></div>
+						<div class="grid-x [ contact-info ]">
+							<div class="cell sm-12 md-4 lg-4 [ contact-info-item ]">
+								<div class="flex-container align-middle">
+									<div class="contact-img flex-container align-center-middle">
+										<i class="fas fa-phone-volume"></i>
+									</div>
+									<div class="contact-description">
+										<span class="font sm">Phone:</span>
+										<span class="font sm">+995 598 25 60 60</span>
+									</div>
+								</div>
+							</div>
+							<div class="cell sm-12 md-12 lg-4 [ contact-info-item ]">
+								<div class="flex-container align-middle">
+									<div class="contact-img flex-container align-center-middle">
+										<i class="fas fa-envelope"></i>
+									</div>
+									<div class="contact-description">
+										<span class="font sm">Mail:</span>
+										<span class="font sm">info@mm.com.ge</span>
+									</div>
+								</div>
+							</div>
+							<div class="cell sm-12 md-4 lg-4 [ contact-info-item ]">
+								<div class="flex-container align-middle">
+									<div class="contact-img flex-container align-center-middle">
+										<i class="fas fa-map-marker-alt"></i>
+									</div>
+									<div class="contact-description">
+										<span class="font sm">Adress:</span>
+										<span class="font sm">Vaja-pshavela ave 23</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cell sm-12 md-6 lg-6 main-right">
+						<p class="font md txt">Deeply hydrating the tissue, in turn softening surface lines caused by dehydrated skin.</p>
+						<p class="font md txt">The actual formula injected into the mesoderm (or surface layer of the skin) during Mesotherapy depends on the problem being treated.</p>
+						<p class="font md txt  [ more ]">For more about us…</p>
+						<input type="text" class="[ text-field ]" name="client-mail" placeholder="Your email..." required>
+						<div class="flex-container align-right [ button-wrapper ]">
+							<button type="submit" class="primary text-capital flex-dir-column align-middle [ button ]">Subscribe</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

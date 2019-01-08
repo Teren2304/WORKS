@@ -1,0 +1,97 @@
+.home-page
+    padding: 80px 0 0 0
+    background-color: #f4f4f6
+    height: 100vh
+    background-image: url('../img/content/index/main-bg-1.png')
+    transition: linear 0.6s;
+    +media-min(992)
+        background-size: contain
+        background-position: top right
+    +media-max(767)
+        height: auto
+        padding-top: 100px
+        background-image: none
+    &.center:before
+        transform: translate(4%, -33%)
+        +media-int(768, 991)
+            transform: translate(-30%, -40%)  
+        +media-max(767)
+            // transform: translate(-60%, -20%)   
+            // opacity: 0.6    
+            display: none
+    &.center:after
+        +media-max(767)
+            transform: translate(-30%, -40%)         
+    .container-fluid
+        z-index: 8
+        padding-top: 3vh
+        padding-bottom: 3vh
+        +media-max(767)
+            padding-top: 0
+        h1 
+            color: $primary
+            margin-bottom: 10px
+            +media-max(767)
+                font-size: 35px
+        p 
+            padding-right: 10%
+            +media-int(768, 1499)
+                font-size: 12px
+    .index
+        &-menu
+            background-color: rgba(83, 165, 72, 0.02)
+            position: absolute
+            z-index: 6
+            left: 0
+            right: 0
+            bottom: 0
+            +media-max(767)
+                position: static
+                background-color: transparent
+        &-inner-menu
+            padding-top: 4vh
+            padding-bottom: 4vh
+            border-bottom: 2px solid #d9d9db
+            +media-max(767)
+                border: none
+                padding-top: 0
+            .button
+                width: 100px
+        &-menu-item
+            cursor: pointer
+            position: relative
+            &:before
+                content: ''
+                position: absolute
+                width: 0
+                height: 2px
+                left: 0
+                bottom: -4.3vh
+                background-color: #1d1d1d
+            &.active
+                &:before
+                    width: 58%
+                    transition: all .5s
+                    +media-max(767)
+                        display: none
+            &-img
+                max-width: 95px
+                border-radius: 50%
+                margin-right: 35px
+                box-shadow: 0px 0px 23px 0px rgba(0,0,0,0.26)
+                +media-int(768, 991)
+                    max-width: 70px
+                    margin-right: 20px
+            &:nth-child(2)
+                border:
+                    left: 3px solid #d9d9db
+                    right: 3px solid #d9d9db
+                +media-max(767)
+                    border: none
+            +media-max(767)
+                margin-bottom: 40px
+            & > div 
+                +media-max(767)
+                    justify-content: flex-start
+            h6.title
+                margin-bottom: 10px

@@ -1,0 +1,46 @@
+.checkbox {
+  appearance: checkbox;
+  cursor: pointer;
+  min: {
+    height: 12px;
+    width: 12px;
+  };
+  max: {
+    height: 12px;
+    width: 12px;
+  };
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    border-radius: 3px;
+  }
+
+  &:before {
+    background: #fff;
+    border: 2px solid $primary;
+  }
+
+  &:after {
+    opacity: 0;
+    background-color: $primary;
+  }
+
+  &:checked {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    border: 0;
+    outline: 0;
+  }
+}

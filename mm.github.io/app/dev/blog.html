@@ -1,0 +1,38 @@
+{% set active = 'blog' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main inner [ blog ]">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<h6 class="font title txt">Blog</h6>
+				<div class="grid-x" style="margin: 0 -10px;">
+					{% for i in range(1, 10) %}
+					<div class="cell sm-12 md-6 lg-4 [ blog-cell ]">
+						<a href="article.html" class="[ blog-item ]">
+							<div class="[ blog-wrapper ]">
+								<img src="./img/content/products/{{i}}.png" class="[ blog-img ]" alt="Procedur description">
+							</div>
+							<div class="[ blog-info ]">
+								<span class="font md regular [ blog-title ]">Mesotherapy involves the injection of a specially prepared</span>
+								<p class="font [ blog-text ]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, eligendi iure error veniam a, doloremque quae quos suscipit voluptatem laudantium cumque perferendis exercitationem architecto sapiente illum, enim laboriosam modi officia.</p>
+								<span class="font xs [ read-more ]">Read More</span>
+							</div>
+						</a>
+					</div>
+					{%- endfor %}
+				</div>
+				{% include "parts/pagination.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

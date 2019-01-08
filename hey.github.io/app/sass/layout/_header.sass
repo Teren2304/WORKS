@@ -1,0 +1,26 @@
+.header
+	background-color: #fff
+	.container
+		padding: 200px 50px 200px 0
+		&:before
+			content: ''
+			height: 210px
+			width: 210px
+			position: absolute
+			top: 50%
+			right: 0
+			background-color: $primary
+			transform: translate(100%, -50%)
+			animation:
+				name: move
+				duration: 7s
+				iteration-count: infinite
+
+@media screen and (max-width: $tablet-sm)
+	.header
+		.container
+			&:before
+				height: 230px
+				width: 230px
+			&:after
+				display: none

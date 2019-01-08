@@ -1,0 +1,46 @@
+{% set active = 'products' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main inner [ product-page ]">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<div class="grid-x">
+					<div class="cell sm-12 md-6 lg-6 main-left">
+						<ul class="[ product-gallery ]">
+							<li data-thumb="./img/content/product-preview/thumb/thumb-1.png">
+								<img src="./img/content/product-preview/full/full-img-1.jpg" />
+							</li>
+							<li data-thumb="./img/content/product-preview/thumb/thumb-2.png">
+								<img src="./img/content/product-preview/full/full-img-2.jpg" />
+							</li>
+							<li data-thumb="./img/content/product-preview/thumb/thumb-3.png">
+								<img src="./img/content/product-preview/full/full-img-3.jpg" />
+							</li>
+							<li data-thumb="./img/content/product-preview/thumb/thumb-4.png">
+								<img src="./img/content/product-preview/full/full-img-4.jpg" />
+							</li>
+						</ul>
+					</div>
+					<div class="cell sm-12 md-6 lg-6 main-right">
+						<h4 class="title light text-uppercase [ product-title ]">VITA B3 cream</h4>
+						<p class="font xs txt [ product-production ]">By: <span class="font semibold">pHformula</span></p>
+						<h6 class="title light [ product-title ]">Product Information</h6>
+						<p class="font md txt">Vitamin B3 is essential to prevent and reverse visible signs of redness, pigment changes and skin ageing. pHformula has developed a highly concentrated vitamin B3 cream with 24 hour moisturizing properties to offer immediate and intense hydration.</p>
+						<p class="font md txt">The light textured Vitamin B3 cream contains Niacinamide at prescription strength, which result in superior skin correction benefits, ideal for daily and year-long application.</p>
+						<p class="font md txt">The 24-hour moisturizing complex in the formula comprised of a synergistic blend of natural moisturizing factors to assist in pro-longed hydration and protection of the skin.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

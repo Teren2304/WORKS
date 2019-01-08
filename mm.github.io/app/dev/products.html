@@ -1,0 +1,167 @@
+{% set active = 'products' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<div class="grid-x">
+					<div class="cell sm-2 md-4 lg-3 [ sort-wrapper ]">
+						<div class="[ sort-list scroll ]">
+							<h6 class="title light">Categories</h6>
+							<div class="[ sort ]">
+								<div class="flex-container align-middle align-justify [ sort-header ]">
+									<p class="font md">Brand</p>
+									<p class="fas fa-angle-down"></p>
+								</div>
+								<ul class="[ sort-body ]">
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="dermalogica">
+										<label for="dermalogica" class="font">Dermalogica</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="pHformula">
+										<label for="pHformula" class="font">pHformula</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="IBSA_Farmaceutici_Italia">
+										<label for="IBSA_Farmaceutici_Italia" class="font">IBSA Farmaceutici Italia</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Laboratoire_REVITACARE">
+										<label for="Laboratoire_REVITACARE" class="font">Laboratoire REVITACARE</label>
+									</li>
+								</ul>
+							</div>	
+							<div class="[ sort ]">
+								<div class="flex-container align-middle align-justify [ sort-header ]">
+									<p class="font md">Type of cream</p>
+									<p class="fas fa-angle-down"></p>
+								</div>
+								<ul class="[ sort-body ]">
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Day_cream">
+										<label for="Day_cream" class="font">Day cream</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Night_cream">
+										<label for="Night_cream" class="font">Night cream</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Protect_from_sun">
+										<label for="Protect_from_sun" class="font">Protect from sun</label>
+									</li>
+								</ul>
+							</div>
+							<div class="[ sort ]">
+								<div class="flex-container align-middle align-justify [ sort-header ]">
+									<p class="font md">Skin type</p>
+									<p class="fas fa-angle-down"></p>
+								</div>
+								<ul class="[ sort-body ]">
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Dry_skin">
+										<label for="Dry_skin" class="font">Dry skin</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Oily_skin">
+										<label for="Oily_skin" class="font">Oily skin</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Combination_skin">
+										<label for="Combination_skin" class="font">Combination skin</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="Combination_skin_2">
+										<label for="Combination_skin_2" class="font">Combination skin 2</label>
+									</li>
+								</ul>
+							</div>
+							<div class="[ sort ]">
+								<div class="flex-container align-middle align-justify [ sort-header ]">
+									<p class="font md">Age range</p>
+									<p class="fas fa-angle-down"></p>
+								</div>
+								<ul class="[ sort-body ]">
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="16-15">
+										<label for="16-15" class="font">16-15</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="26-30">
+										<label for="26-30" class="font">26-30</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="31-35">
+										<label for="31-35" class="font">31-35</label>
+									</li>
+									<li class="flex-container align-middle">
+										<input type="checkbox" class="checkbox" id="35+">
+										<label for="35+" class="font">35+</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="[ sort-show hide ] fas fa-angle-right"></div>
+					</div>
+					<div class="cell sm-12 md-8 lg-9 [ products-wrapper ]">
+						<div class="grid-x">
+							{% for i in range(1, 4) %}
+							<div class="cell sm-6 md-4 lg-3">
+								<a href="product.html" class="[ product {%if i == 1 %}active {% endif %}]">
+									<div class="[ product-img ]">
+										<img src="./img/content/product-list/1.png" alt="Products 1">
+									</div>
+									<hr class="separate [ product-separate ]">
+									<p class="font semibold [ product-title ]">Dermalogica</p>
+									<p class="font [ product-description ]">Skin Smoothing Cream Crema Crme</p>
+								</a>
+							</div>
+							<div class="cell sm-6 md-4 lg-3">
+								<a href="product.html" class="[ product ]">
+									<div class="[ product-img ]">
+										<img src="./img/content/product-list/2.png" alt="Products 2">
+									</div>
+									<hr class="separate [ product-separate ]">
+									<p class="font semibold [ product-title ]">Dermalogica</p>
+									<p class="font [ product-description ]">Pure Night 1.7oz</p>
+								</a>
+							</div>
+							<div class="cell sm-6 md-4 lg-3">
+								<a href="product.html" class="[ product ]">
+									<div class="[ product-img ]">
+										<img src="./img/content/product-list/3.png" alt="Products 3">
+									</div>
+									<hr class="separate [ product-separate ]">
+									<p class="font semibold [ product-title ]">Laboratoire REVITACARE</p>
+									<p class="font [ product-description ]">Cytocare 532, 10 x 5mL vials.</p>
+								</a>
+							</div>
+							<div class="cell sm-6 md-4 lg-3">
+								<a href="product.html" class="[ product ]">
+									<div class="[ product-img ]">
+										<img src="./img/content/product-list/4.png" alt="Products 4">
+									</div>
+									<hr class="separate [ product-separate ]">
+									<p class="font semibold [ product-title ]">pHformula</p>
+									<p class="font [ product-description ]">VITA C cream</p>
+								</a>
+							</div>
+							{%- endfor %}
+						</div>
+					</div>
+				</div>
+				{% include "parts/pagination.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

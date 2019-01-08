@@ -1,0 +1,42 @@
+{% set active = 'procedures' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main inner [ search-result ]">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<h6 class="font title txt">Procedures</h6>
+				<div class="grid-x" style="margin: 0 -10px;">
+					<div class="cell sm-12 md-12 lg-12 font md regular [ search-request ]">
+						Search for... <span class="request">Nature</span>
+					</div>
+					<div class="cell sm-12 md-12 lg-12 font md regular [ search-request-result ]">
+						<span class="request-result-quantity">235</span> results...
+					</div>
+					{% for i in range(1, 10) %}
+					<div class="cell sm-12 md-6 lg-4">
+						<a href="product.html" class="[ search-result-item ]">
+							<div class="[ search-result-wrapper ]">
+								<img src="./img/content/products/{{i}}.png" class="[ search-result-img ]" alt="Procedur description">
+							</div>
+							<div class="[ search-result-info ]">
+								<span class="font md regular [ result-title ]">Mesotherapy involves the injection of a specially prepared</span>
+							</div>
+						</a>
+					</div>
+					{%- endfor %}
+				</div>
+				{% include "parts/pagination.html" %}
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

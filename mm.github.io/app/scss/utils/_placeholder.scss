@@ -1,0 +1,17 @@
+%font {
+  font: {
+    style: normal;
+    size: $base-font-size;
+    family: $base-font-family;
+    weight: $base-font-weight;
+  };
+  color: $base-text-color;
+  line-height: $base-line-height;
+}
+
+%input {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 10px;
+  height: $base-height;
+}

@@ -1,0 +1,58 @@
+.about-us
+    h4.title 
+        margin-bottom: 30px
+    .main
+        &-left, &-right 
+            +media-int(480, 768)
+                padding: 10px
+        &-left
+            padding-left: 0
+            &:after 
+                display: none
+        &-right
+            padding-right: 0
+            p
+                &.txt 
+                    margin-bottom: 30px
+                &.more 
+                    margin-top: 80px
+            .text-field
+                border: 1px solid #d9fff0
+                color: #989898
+                &::-webkit-input-placeholder
+                  opacity: 0.6
+            .button-wrapper
+                margin-top: 17px
+                .button 
+                    flex-basis: auto
+                    width: auto
+                    line-height: 40px
+                    padding: 0 50px
+
+    .contact
+        &-info
+            margin-top: 40px
+            &-item
+                +media-max(1024)
+                    margin-bottom: 30px
+        &-img
+            flex-basis: 40px
+            width: 40px
+            height: 40px
+            margin-right: 10px
+            background-color: #fff
+            border: 1px solid #868585
+            border-radius: 50%
+            .fas
+                font-size: 14px
+                color: $primary
+        &-description
+            span
+                display: block
+                width: 100%
+                font-size: 11px
+    .map
+        min-width: 100%
+        min-height: 480px
+        +media-max(1024)
+            min-height: 300px

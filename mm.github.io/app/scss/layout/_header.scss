@@ -1,0 +1,157 @@
+.header {
+  .nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 9;
+    border-bottom: 2px solid $primary;
+    &.default {
+      position: relative;
+    }
+
+    &.fixed {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .show {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    @include media-max(767) {
+      display: flex;
+    }
+    &-item {
+      height: 2px;
+      width: 100%;
+      margin: 2px 0;
+      background-color: $third;
+    }
+
+    &.active {
+      .show-item {
+        margin: 0;
+        position: absolute;
+        transition: transform 0.5s;
+
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .menu {
+    @include media-max(767) {
+      display: block;
+      position: absolute;
+      opacity: 0;
+      z-index: 9;
+      left: 0;
+      right: 0;
+      top: 100%;
+      transform: translateY(-200%);
+      transition: transform 0.5s;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    &-item {
+      margin: 0 25px;
+      position: relative;
+      padding: 10px 0;
+      @include media-max(767) {
+        display: block;
+        text-align: center;
+      }
+      &:before {
+        @include media-max(767) {
+          display: none;
+        }
+      }
+      &.active,
+      &:hover {
+        color: $primary;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 6px;
+          width: 6px;
+          background-color: $primary;
+          border-radius: 100%;
+          left: 50%;
+          bottom: 0;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    &.active {
+      @include media-max(767) {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    &.not-active {
+      @include media-max(767) {
+        opacity: 0;
+        transform: translateY(-200px);
+      }
+    }
+  }
+
+  .user {
+    @include media-max(767) {
+      text-align: center;
+    }
+    &-icon {
+      font-size: 30px;
+      margin: 0 10px;
+      @include media-max(767) {
+        display: none;
+      }
+    }
+
+    &-wrapper {
+      &.edit-profile {
+        display: none;
+      }
+      @include media-max(767) {
+        width: 100%;        
+      }
+    }
+
+    &-login,
+    &-registration,
+    &-edit {
+      &:hover,
+      &.active {
+        color: $primary;
+      }
+      @include media-max(767) {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  .logo {
+    height: 70px;
+    width: 70px;
+    margin: 5px 0;
+    display: block;
+  }
+}

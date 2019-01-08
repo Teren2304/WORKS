@@ -1,0 +1,28 @@
+.product-item-asset-wrapper {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.product-item-asset-inner {
+  display: block;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 225px;
+  position: relative;
+  
+  @include media-min(1025) {
+    &:hover {
+      .product-item-asset-img {
+        transition: transform 0.5s;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

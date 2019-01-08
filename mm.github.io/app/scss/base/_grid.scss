@@ -1,0 +1,65 @@
+$grid-padding: 10px;
+
+$grid-margin: 10px;
+
+$grid-margin-all: #{$grid-padding} * 2;
+
+$count-column: 12;
+
+$count-width: 100% / $count-column;
+
+$brackpoints: ("sm": 0, "md": $mobile-sm, "lg": $tablet-lg);
+
+.grid {
+  &-x {
+    display: flex;
+    flex-flow: row wrap;
+
+    & > .shrink {
+      width: auto;
+    }
+
+    & > .auto {
+      width: auto;
+    }
+  }
+}
+
+.cell {
+  flex: 0 0 auto;
+  min: {
+    height: 0;
+    width: 0;
+  };
+  width: 100%;
+
+  &.auto {
+    flex: 1 1 0;
+  }
+
+  &.shrink {
+    flex: 0 0 auto;
+  }
+}
+
+@each $status, $brackpoints-size in $brackpoints {
+  @media print, screen and (min-width: $brackpoints-size) {
+    .grid-x {
+      & > .#{$status} {
+        @for $i from 1 through $count-column {
+          &-#{$i} {
+            width: ($i * $count-width);
+          }
+        }
+      }
+    }
+
+    .grid-x,
+    .grid-y {
+      [class*="#{$status}"] {
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+      }
+    }
+  }
+}

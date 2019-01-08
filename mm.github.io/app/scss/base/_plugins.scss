@@ -1,0 +1,14 @@
+.lSSlideOuter {
+  @include media-max(768) {
+    margin-bottom: 30px;
+  }
+}
+
+// .lSPager
+// 	li
+//         opacity: 0.3
+//         &.active
+//             opacity: 1
+//         img
+//             max-width: 70px !important
+//             margin: 0 auto

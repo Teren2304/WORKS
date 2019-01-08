@@ -1,0 +1,31 @@
+{% set active = 'procedures' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main [ procedures ]">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<h6 class="font title txt">Procedures</h6>
+				<div class="grid-x" style="margin: 0 -5px;">
+					{% for i in range(0, 10) %}
+					<div class="cell sm-12 md-6 lg-4 [ procedure ]">
+						<a href="procedure.html" class="[ procedure-item ] shadow">
+							<img src="./img/content/procedures/procedur-2.png" class="[ procedure-img ]" alt="Procedur description">
+							<span class="font md regular [ procedure-title ]">Mesotherapy involves the injection of a specially prepared</span>
+						</a>
+					</div>
+					{%- endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

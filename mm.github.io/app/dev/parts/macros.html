@@ -1,0 +1,17 @@
+{% set items = [
+        { name : 'index', title: 'Home'},
+        { name : 'about-us', title: 'About us'},
+        { name : 'products', title: 'Products'},
+        { name : 'procedures', title: 'Procedures'},
+        { name : 'blog', title: 'Skin care'}
+    ]
+%}
+
+
+{% macro menu(active) %}
+{% for item in items %}
+                       
+    <a href="{{item.name}}.html" {%if active == item.name %} class="font menu-item active" {% else %} class="font menu-item" {% endif %}>{{item.title}}</a>
+
+{% endfor %}
+{% endmacro %}

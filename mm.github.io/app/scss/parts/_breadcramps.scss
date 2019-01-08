@@ -1,0 +1,32 @@
+.breadcramps {
+  margin-bottom: 30px;
+
+  &-item {
+    position: relative;
+    padding-right: 10px;
+    margin-right: 5px;
+
+    &:after {
+      content: ">";
+      font-size: 14px;
+
+      @include absolute-right;
+    }
+
+    &:last-child,
+    &.active {
+      margin-right: 0;
+      font: {
+        size: 12px;
+        weight: 500;
+      };
+      padding-right: 0;
+      cursor: auto;
+      pointer-events: none;
+
+      &:after {
+        content: "";
+      }
+    }
+  }
+}

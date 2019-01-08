@@ -1,0 +1,32 @@
+.footer
+	padding: 100px 0
+	.social
+		a
+			height: 36px
+			width: 36px
+			margin: 5px
+			position: relative
+			border-radius: 100%
+			&:before
+				position: absolute
+				left: 50%
+				top: 50%
+				font-size: 20px
+				color: #fff
+				transform: translate(-50%, -50%)
+			&.twitter
+				background-color: #78cdf0
+			&.facebook
+				background-color: #537bbd
+			&.pinterest
+				background-color: #eb5755
+
+@media screen and (max-width: $mobile-lg)
+	.footer
+		padding: 50px 0
+		.container
+			flex-wrap: wrap
+			div
+				width: 100%
+				text-align: center
+				padding: 10px 0

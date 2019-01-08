@@ -1,0 +1,33 @@
+.section-2
+	&:before
+		content: ''
+		background-color: $third
+		position: absolute
+		left: 0
+		top: 0
+		right: 0
+		bottom: 0
+		opacity: 0.8
+	.container
+		padding: 180px 0
+		.menu
+			&-item
+				padding: 10px 0
+				margin: 10px 0
+				a
+					color: inherit
+					position: relative
+					&:before
+						content: ''
+						height: 3px
+						position: absolute
+						left: 0
+						bottom: 0
+						right: 0
+						width: 0
+						background-color: #fff
+					&:hover,
+					&.active
+						&:before
+							transition: width .5s
+							width: 100%

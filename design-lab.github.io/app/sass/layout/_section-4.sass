@@ -1,0 +1,40 @@
+.section-4
+	.work
+		column-count: 3
+		column-gap: 20px
+		&-item
+			display: block
+			height: 250px
+			margin-bottom: 20px
+			vertical-align: bottom
+			position: relative
+			&:before
+				content: ''
+				background-color: rgba(0,0,0,0.5)
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				width: 0
+			&:hover,
+			&.active
+				&:before
+					transition: width .5s
+					width: 90%
+			.title
+				position: absolute
+				bottom: 10px
+				left: 10px
+				letter-spacing: 2px
+				font-weight: 600
+
+@media screen and (max-width: $tablet-sm)
+	.section-4
+		.work
+			column-count: 2
+
+@media screen and (max-width: $mobile-sm)
+	.section-4
+		.work
+			column-count: 1

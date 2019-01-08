@@ -1,0 +1,113 @@
+.header
+	.nav
+		background-color: rgba(255,255,255,0.8)
+		position: relative
+		z-index: 9
+		border-bottom: 2px solid $primary
+		&.default
+			position: relative
+		&.fixed
+			position: fixed
+			left: 0
+			top: 0
+			right: 0	
+	
+	.show
+		display: none
+		width: 30px
+		height: 30px
+		cursor: pointer
+		position: relative
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		&-item
+			height: 2px
+			width: 100%
+			margin: 2px 0
+			background-color: $third
+		&.active
+			.show-item
+				margin: 0	
+				position: absolute
+				transition: transform .5s
+				&:nth-child(1)
+					transform: rotate(45deg)
+				&:nth-child(2)
+					display: none
+				&:nth-child(3)
+					transform: rotate(-45deg)
+
+	.menu
+		&-item
+			margin: 0 25px
+			position: relative
+			padding: 10px 0
+			&.active,
+			&:hover
+				color: $primary
+				&:before
+					content: ''
+					position: absolute
+					height: 6px
+					width: 6px
+					background-color: $primary
+					border-radius: 100%
+					left: 50%
+					bottom: 0
+					transform: translateX(-50%)
+
+	.user
+		&-icon
+			font-size: 30px
+			margin: 0 10px
+		&-login,
+		&-registration
+			&:hover,
+			&.active
+				color: $primary
+
+	.logo
+		height: 80px
+		width: 80px
+		display: block
+
+
+@media screen and (max-width: 768px)
+	.header
+		.show
+			display: flex
+		
+		.user
+			text-align: center
+			&-wrapper
+				width: 100%
+			&-icon
+				display: none
+			&-login,
+			&-registration
+				padding: 10px 0
+
+
+		.menu
+			display: block
+			position: absolute
+			opacity: 0
+			z-index: 9
+			left: 0
+			right: 0
+			top: 100%
+			transform: translateY(-200%)
+			transition: transform .5s
+			background-color: rgba(255,255,255,0.8)
+			&-item
+				display: block
+				text-align: center
+				&:before
+					display: none
+			&.active
+				opacity: 1
+				transform: translateY(0)
+			&.not-active
+				opacity: 0
+				transform: translateY(-200%)

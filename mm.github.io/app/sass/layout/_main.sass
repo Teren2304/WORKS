@@ -1,0 +1,73 @@
+.main
+	padding: 110px 0 90px 0
+	position: relative
+	+media-max(1024)
+		padding-bottom: 20px
+	&:before
+		top: 150px
+		left: 0
+		height: 419px
+		width: 200px
+		background-image: url('../img/leaf-left.png')
+		background-position: -150px 50%
+		background-repeat: no-repeat
+		background-size: cover
+	&:after
+		top: 0
+		right: 0
+		height: 333px
+		width: 122px
+		background-image: url('../img/leaf-right.png')
+		background-position: 30px 50%
+		background-size: contain
+		transform: translateY(-25%)
+	&:before,
+	&:after
+		z-index: -1
+		content: ''
+		position: absolute
+		background-repeat: no-repeat
+
+
+	&.center
+		&:before,
+		&:after
+			position: fixed
+			z-index: 5
+			height: 800px
+			width: 1000px
+			background-size: cover
+			background-position: 50%
+			background-image: url('../img/leaf.png')
+		&:before
+			top: 50%
+			left: -50%
+			transform: translate(50%, -20%)
+		&:after
+			top: 100%
+			right: 0
+			transform: translate(50%, -30%)
+
+
+	&-left,
+	&-right
+		width: 50%
+		padding: 0 20px
+		position: relative
+		+media-max(768)
+			padding: 0
+	&-left
+		&:after
+			content: ''
+			width: 1px
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			background-color: #EFEFEF
+
++media-max(768)
+	.main
+		&-left
+			&:after
+				display: none

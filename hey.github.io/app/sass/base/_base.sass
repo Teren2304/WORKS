@@ -1,0 +1,182 @@
+$font-color: ('primary': $primary, 'second': $second, 'fourth': $fourth)
+$font-size: ('xs': 37px, 'lg': 42px)
+$font-weight: ('normal': 400, 'semibold': 500, 'bold': 600, 'bold-black': 900)
+.font
+	font-size: $base-font-size
+	font-family: $base-font-family
+	line-height: $base-line-height
+	@each $status, $text-color in $font-color
+		&.#{$status}
+			color: $text-color
+	@each $status, $text-weight in $font-weight
+		&.#{$status}
+			font-weight: $text-weight
+	@each $status, $text-size in $font-size
+		&.#{$status}
+			font-size: $text-size
+
+.container-fluid
+	wax-width: 100%
+
+.container
+	max-width: $max-width
+	min-width: $min-width
+	padding: 0 20px
+	&:after
+		content: ''
+		background-color: $primary
+		opacity: 0.7
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		width: 35%
+	*
+		position: relative
+		z-index: 1
+	
+.section
+	max-width: 100%
+	&-text
+		margin-top: 50px
+		font-weight: 600
+
+.container-fluid,
+.container,
+.section
+	margin: 0 auto
+	position: relative
+
+.wrapper
+	&-left,
+	&-right
+		position: relative
+	&-left
+		width: 35%
+		padding: 0 50px
+	&-right
+		width: 65%
+		padding-left: 80px
+
+h1.title,
+h2.title,
+h3.title,
+h4.title,
+h5.title,
+h6.title
+	line-height: 1
+	text-transform: uppercase
+	@each $status, $text-color in $font-color
+			&.#{$status}
+				color: $text-color
+h1.title
+	font-size: 200px
+	font-weight: 900
+h2.title
+	font-size: 180px
+	font-weight: 900
+h3.title
+	font-size: 100px
+	font-weight: 600
+h4.title
+	font-size: 68px
+	font-weight: 400
+h5.title
+	font-size: 60px
+	font-weight: 400
+h6.title
+	font-size: 42px
+	font-weight: 400
+
+.separate,
+.separate-vertical
+	background-color: #fff
+
+.separate
+	width: 150px
+	height: 45px
+	margin: 70px 0
+
+.separate-vertical
+	height: 150px
+	width: 45px
+	margin: 50px 0 50px auto
+
+@media screen and (max-width: 1800px)
+	h1.title
+		font-size: 140px
+	h2.title
+		font-size: 120px
+	h3.title
+		font-size: 80px
+	h4.title
+		font-size: 48px
+	h5.title
+		font-size: 40px
+	h6.title
+		font-size: 22px
+	.wrapper
+		&-left,
+		&-right
+			padding: 0 20px
+
+@media screen and (max-width: 1600px)
+	h1.title
+		font-size: 120px
+	h2.title
+		font-size: 100px
+	h3.title
+		font-size: 60px
+	h4.title
+		font-size: 38px
+	h5.title
+		font-size: 30px
+	h6.title
+		font-size: 20px
+	.font
+		font-size: 30px
+
+@media screen and (max-width: 992px)
+	.container
+		&:after
+			width: 50%
+	.wrapper
+		flex-wrap: wrap
+		&-left,
+		&-right
+			width: 100%
+			padding: 10px
+
+@media screen and (max-width: $mobile-lg)
+	.container
+		padding: 0
+	h1.title
+		font-size: 80px
+	h2.title
+		font-size: 40px
+	h3.title
+		font-size: 34px
+	h4.title
+		font-size: 28px
+	h5.title
+		font-size: 20px
+	h6.title
+		font-size: 18px
+
+	.wrapper
+		&-left,
+		&-right
+			padding: 20px
+
+	.separate
+		width: 75px
+		height: 25px
+
+	.separate-vertical
+		height: 75px
+		width: 25px
+
+	header.header,
+	section.section
+		.container
+			padding: 40px 0

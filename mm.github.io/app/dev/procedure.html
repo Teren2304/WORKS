@@ -1,0 +1,47 @@
+{% set active = 'procedures' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+	{% include "parts/header.html" %}
+	<div class="main inner [ procedures ]">
+		<div class="container-fluid">
+			<div class="container">
+				{% include "parts/breadcramps.html" %}
+				<div class="grid-x">
+					<div class="cell sm-12 md-6 lg-6 main-left">
+						<ul class="[ product-gallery ]">
+							<li data-thumb="./img/content/product-preview/thumb/thumb-1.png">
+								<img src="./img/content/product-preview/full/full-img-1.jpg" />
+							</li>
+							<li data-thumb="./img/content/product-preview/thumb/thumb-2.png">
+								<img src="./img/content/product-preview/full/full-img-2.jpg" />
+							</li>
+							<li data-thumb="./img/content/product-preview/thumb/thumb-3.png">
+								<img src="./img/content/product-preview/full/full-img-3.jpg" />
+							</li>
+							<li data-thumb="./img/content/product-preview/thumb/thumb-4.png">
+								<img src="./img/content/product-preview/full/full-img-4.jpg" />
+							</li>
+						</ul>
+					</div>
+					<div class="cell sm-12 md-6 lg-6 main-right">
+						<h4 class="title light text-uppercase [ product-title ]">Mesotherapy</h4>
+						<p class="font xs txt [ product-production ]"><i class="far fa-clock"></i><span class="font semibold">Duration: 90-120 Min</span></p>
+						<h6 class="title light [ product-title ]">Description of procedure</h6>
+						<p class="font md txt">Mesotherapy involves the injection of a specially prepared mixture of vitamins, amino acids and medications, placed just millimetres under the skin and works by plumping and deeply hydrating the tissue, in turn softening surface lines caused by dehydrated skin.</p>
+						<p class="font md txt">The actual formula injected into the mesoderm (or surface layer of the skin) during Mesotherapy depends on the problem being treated.</p>
+						<p class="font md txt">In general, the substances used can include: a local anaesthetic, and products that may reduce inflammation and treat veins, muscle relaxants, enzymes, vitamins, minerals, plant extracts, hormones, and hormone blockers; to name but a few.</p>
+						<p class="font md txt">The results are subtle but effective; this treatment isn’t designed for the removal of any scarring or sun spots, the intention is to brighten and firm your skin so that it is the best version of its regular self. One treatment will ensure that you look like you’ve slept for a week - who wouldn’t want that?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include "parts/footer.html" %}
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

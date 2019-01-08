@@ -1,0 +1,66 @@
+{% set active = 'index' %}
+{% include "parts/head.html" %}
+<body>
+<div class="blur">
+    {% include "parts/header.html" %}
+    <div class="main background center [ home-page ]">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="grid-x">
+                    <div class="cell sm-12 md-6 lg-6">
+                        <h1 class="title text-capital">Light defining cream</h1>
+                        <p class="font md txt">Designer schenkten hinter den Kulissen der Modeshows dem internationalen Top-Stylisten Team von La Biosthétique ihr Vertrauen in Sachen innovativem Make-up und kreativen Hair Styling Looks. Backstage muss alles schnell gehen, die Frisuren müssen auf den Punkt sitzen und das bei den unterschiedlichsten Haarlängen und –typen. Lässigkeit ist angesagt</p>
+                        <form class="[ search ]">
+                            <input type="text" class="[ text-field ]" name="search" placeholder="Search..." required>
+                            <button class="[ search-btn ]" type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        <div class="[ index-menu ]">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="[ index-inner-menu ]">
+                        <div class="grid-x">
+                            <div class="cell sm-12 md-4 [ index-menu-item ] active" data-main-bg="main-bg-1.png">
+                                <div class="flex-container align-middle">
+                                    <img src="./img/content/index/product-1.png" class="[ index-menu-item-img ]" alt="">
+                                    <div class="block">
+                                        <h6 class="title">Products</h6>
+                                        <a href="products.html" class="button text-capital">See more</a>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="cell sm-12 md-4 [ index-menu-item ]" data-main-bg="main-bg-2.png">
+                                <div class="flex-container align-center-middle">
+                                    <img src="./img/content/index/product-2.png" class="[ index-menu-item-img ]" alt="">
+                                    <div class="block">
+                                        <h6 class="title">Procedures</h6>
+                                        <a href="procedures.html" class="button text-capital">See more<a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell sm-12 md-4 [ index-menu-item ]" data-main-bg="main-bg-3.png">
+                                <div class="flex-container align-right-middle">
+                                    <img src="./img/content/index/product-3.png" class="[ index-menu-item-img ]" alt="">
+                                    <div class="block">
+                                        <h6 class="title">Blog</h6>
+                                        <a href="blog.html" class="button text-capital">See more<a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include "parts/login-popup.html" %}
+{% include "parts/registration-popup.html" %}
+{% include "parts/edit-popup.html" %}
+{% include "parts/script.html" %}
+</body>
+</html>

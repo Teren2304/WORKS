@@ -1,0 +1,85 @@
+/* Grid padding */
+$grid-padding: 15px
+
+/* Grid margin */
+$grid-margin: 15px
+
+/* Grid padding for 2 side */
+$grid-margin-all: #{$grid-padding} * 2
+
+/* Column count */
+$count-column: 12
+
+/* Column width */
+$count-width: 100 / $count-column
+
+/* Breakpoints size */
+$brackpoints: ('small': 0, 'medium': 769px, 'large': 1200px, 'big': 1600px)
+
+/* Base style for grid */
+.grid
+	&-x
+		display: flex
+		flex-flow: row wrap
+		& > .shrink
+				width: auto
+		& > .auto
+				width: auto
+	&-padding-x
+		& > .cell
+			padding:
+				right: $grid-padding
+				left: $grid-padding
+	&-margin-x  
+		& > .cell
+			width: calc(100% - #{$grid-margin-all})
+			margin:
+				left: $grid-margin
+				right: $grid-margin
+		& > .auto
+			width: auto
+		& > .shrink
+			width: auto
+
+/* Base style for cell */
+.cell
+	flex: 0 0 auto
+	min:
+		height: 0
+		width: 0
+	width: 100%
+	&.auto
+		flex: 1 1 0
+	&.shrink
+		flex: 0 0 auto
+
+/* Compile grid, grid size, grid margin for all breackpoints */
+@each $status, $brackpoints-size in $brackpoints
+	@media print, screen and (min-width: $brackpoints-size) 
+		.grid-x
+			& > .#{$status}
+				@for $i from 1 through $count-column
+					&-#{$i}
+						width: ($i * $count-width)+%
+		.#{$status}
+			@for $i from 0 through $count-column
+				&-offset-#{$i}
+					margin-left: ($i * $count-width)+%
+		
+		.grid-margin-x
+			/* Generate margin X*/
+			& > .#{$status}
+				@for $i from 1 through $count-column
+					&-#{$i}
+						width: calc(#{($i * $count-width)+%} - #{$grid-margin-all})
+
+			/* Generate offset X*/
+			& > .#{$status}
+				@for $i from 0 through $count-column
+					&-offset-#{$i}
+						margin-left: calc(#{($i * $count-width)+%} + #{$grid-margin})
+		.grid-x,	
+		.grid-y
+			[class*="#{$status}"]
+				-ms-flex-preferred-size: auto
+				flex-basis: auto

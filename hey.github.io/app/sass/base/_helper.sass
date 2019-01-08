@@ -1,0 +1,81 @@
+.flex
+	&-container
+		position: relative
+		display: flex
+	&-child-auto
+		flex: 1 1 auto
+	&-child-grow 
+		flex: 1 0 auto
+	&-child-shrink
+		flex: 0 1 auto
+	&-dir-row
+		flex-direction: row
+		flex-wrap: wrap
+	&-dir-row-reverse
+		flex-direction: row-reverse
+	&-dir-column
+		flex-direction: column
+	&-dir-column-reverse
+		flex-direction: column-reverse
+
+.align
+	&-right
+		justify-content: flex-end
+	&-center
+		justify-content: center
+	&-justify
+		justify-content: space-between
+	&-spaced
+		justify-content: space-around
+	&-top
+		align-items: flex-start
+	&-bottom
+		align-items: flex-end
+	&-middle
+		align-items: center
+	&-stretch
+		align-items: stretch
+	&-self-top
+		align-self: flex-start
+	&-self-bottom
+		align-self: flex-end
+	&-self-middle
+		align-self: center
+	&-self-stretch
+		align-self: stretch
+	&-center-middle
+		justify-content: center
+		align-items: center
+		align-content: center
+
+.text
+	&-left
+		text-align: left
+	&-right
+		text-align: right
+	&-center
+		text-align: center
+	&-justify
+		text-align: justify
+	&-uppercase
+		text-transform: uppercase
+	&-lowercase
+		text-transform: lowercase
+	&-cursive
+		font-style: italic
+	&-underline
+		text-decoration: underline
+	&-nowrap
+		white-space: nowrap
+
+.overflow
+	&-hidden
+		overflow: hidden
+	&-visible
+		overflow: visible
+
+.background
+	background:
+		repeat: no-repeat
+		size: cover
+		position: center

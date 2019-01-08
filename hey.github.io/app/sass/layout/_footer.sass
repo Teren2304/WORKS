@@ -1,0 +1,109 @@
+.footer
+	background-color: $third
+	.container
+		padding: 0
+		.wrapper
+			&-left
+				padding: 0
+			&-right
+				padding: 0
+		.logo
+			background-color: $third
+			&-img
+				max-height: 100px
+				width: auto
+				margin: 0 40px	
+
+		.social-wrapper
+			min-height: 400px
+			position: relative
+			background-color: $second
+		.social
+			padding-left: 20px
+			position: absolute
+			height: 100%
+			left: 0
+			right: 0
+			bottom: 0
+			height: 800px
+			&:before
+				content: ''
+				background-color: $second
+				position: absolute
+				left: -100000px
+				top: 0
+				bottom: 0
+				right: 0
+			&-item
+				margin: 15px 0
+				padding: 10px 0
+				//white-space: nowrap
+				&:hover,
+				&.active
+					color: $primary
+				span
+					display: inline-block
+					vertical-align: middle
+					&:first-child
+						width: 50px
+						font-size: 50px
+						text-align: center
+					&:last-child
+						margin-left: 15px
+
+@media screen and (max-width: 1600px)
+	.footer
+		.container
+			.social
+				&-item
+					font-size: 30px
+			.logo
+				&-img
+					margin: 0 10px
+					max-height: auto
+					max-width: 25%
+				.flex-container
+					flex-wrap: wrap
+
+@media screen and (max-width: 1366px)
+	.footer
+		.container
+			.wrapper
+				flex-wrap: wrap
+				&-left,
+				&-right
+					width: 100%
+			.social-wrapper
+				padding: 50px 0
+				min-height: auto
+			.social
+				height: auto
+				position: relative
+				&-item
+					font-size: 30px
+			.logo
+				padding: 50px 0
+				&-img
+					margin: 10px 20px
+
+@media screen and (max-width: $mobile-sm)
+	.footer
+		.container
+			.wrapper
+				flex-wrap: wrap
+				&-left,
+				&-right
+					width: 100%
+			.social-wrapper
+				padding: 50px 0
+				min-height: auto
+			.social
+				height: auto
+				position: relative
+				&-item
+					span
+						font-size: 26px
+						&:first-child
+							display: none
+						&:last-child
+							margin-left: 0

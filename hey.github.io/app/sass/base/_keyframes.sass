@@ -1,0 +1,18 @@
+@keyframes move
+	0%
+		right: 0
+	50%
+		right: 60%
+		background-color: $second
+	100%
+		right: 0
+
+@media screen and (max-width: $tablet-sm)
+	@keyframes move
+		0%
+			right: 0
+		50%
+			right: 100%
+			background-color: $second
+		100%
+			right: 0

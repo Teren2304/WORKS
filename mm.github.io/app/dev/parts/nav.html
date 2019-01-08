@@ -1,0 +1,15 @@
+{% import "parts/macros.html" as nav %}
+<menu class="flex-container align-middle [ menu ]">
+    {{nav.menu(active)}}
+    <div class="flex-container align-middle [ user ]">
+        <p class="far fa-user [ user-icon ]"></p>
+        <div class="[ user-wrapper login-and-reg ]">
+            <a href="#" class="font block [ user-login ]">Login</a>
+            <a href="#" class="font block fourth [ user-registration ]">Registration</a>
+        </div>
+        <div class="[ user-wrapper edit-profile ]">
+            <a href="#" class="font block [ user-edit ]">User</a>
+            <a href="#" class="font block fourth">Logout</a>
+        </div>
+    </div>
+</menu>
